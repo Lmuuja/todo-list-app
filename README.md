@@ -1,0 +1,1 @@
+A clean and interactive To-Do List web application designed with a mobile-first approach. Built using semantic HTML5, custom CSS styling with smooth transition effects, and dynamic JavaScript logic for managing tasks effortlessly.
