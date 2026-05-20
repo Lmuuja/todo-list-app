@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: rgb(11, 0, 45);
+            font-family: "Roboto Slab", serif; 
+            margin: 0; /* تم التغيير إلى 0 لمنع انكماش الهاتف */
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .task {
+            display: flex;
+            background-color: #ffffff;
+            padding: 1px;
+            border-bottom: 1px solid black;
+            transition: box-shadow 0.2s;
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+        }
+        /* .done {
+            background-color: #43eb3e;
+        } */
+        .task:hover {
+        /* أضفنا !important لكي يجبر المتصفح على إظهار الظل فوق أي لون خلفية */
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.30) !important;
+        /* حركة جمالية اختيارية: تجعل الكرت يرتفع للأعلى قليلاً عند مرور الماوس */
+            transform: translateY(-2px);
+        }
+        .task:active {
+        /* يظهر ظل قوي لحظة الضغط بالإصبع */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25) !important;
+        /* ينضغط الكرت للداخل قليلاً ليعطي شعوراً كأنه زر حقيقي (تفاعل حركي ممتاز) */
+            transform: scale(0.98); 
+        /* تسريع الحركة لحظة الضغط */
+            transition: all 0.1s ease;
+        }
+        /* .task-table {
+            width: 92%;               
+            max-width: 600px;        
+             height: 350px; 
+            background-color: rgb(180, 180, 180);
+            margin-top: 20px;
+            border-radius: 20px;
+        } */
+        button {
+            border: none;
+            font-size: 20px;
+            box-shadow: 0 3px 5px rgba(168, 168, 168, 0.38);
+        }
+        button.circular {
+            width: 40px;
+            height: 30px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            line-height: 5px;
+        }
+    </style>
+</head>
+<body>
+   <div style="text-align: start;">
+    <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px 0;">
+        
+        <div class="task-table" style="width: 92%; max-width: 600px; background: #cecece; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); margin: 20px auto;">
+        <!--  Centre Div  -->
+        <!-- <div style="display: flex; justify-content: center; align-items: center;"> -->
+            <!-- Tasks Table -->
+            <!-- <div class="task-table"> -->
+                <!-- Header -->
+                <!-- <div style="display: flex; align-items: center; background-color: #190168;  color: white; font-size: 15px; font-weight: bold; padding: 10px;">
+                    <h1 style="flex-grow: 1; text-align: center;">مهامي</h1>
+                    <button id="add_task" class="circular" style="background: white; margin-left: 10px;">
+                        <span class="material-symbols-outlined">
+                        add
+                        </span>
+                    </button>
+                </div> -->
+                <div style="display: flex; align-items: center; justify-content: space-between; background: linear-gradient(135deg, #190168, #3a1cbb); color: white; padding: 15px 25px; border-radius: 16px 16px 0 0; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+    
+                <button id="add_task" class="circular" style="background: white; color: #190168; border: none; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: all 0.3s ease; transform: scale(1);" 
+                 onmouseover="this.style.transform='scale(1.1)'; this.style.background='#f0f0f0';" 
+                onmouseout="this.style.transform='scale(1)'; this.style.background='white';">
+                <span class="material-symbols-outlined" style="font-weight: bold; font-size: 24px;">add</span>
+                    </button>
+                <h1 style="margin: 0; font-size: 22px; font-weight: 700; letter-spacing: 0.5px; text-align: center; flex-grow: 1;">TASKS</h1>
+            <div style="width: 40px;"></div> 
+        </div>
+                <!-- // Header // -->
+                 <!-- Tasks -->
+                <div id="tasks" style="padding: 10px; ">
+                    <!-- Task -->
+    
+                    <!-- // Task // -->
+                </div>
+                <!-- // Tasks // -->
+            </div>
+            <!-- // Tasks Table // -->
+        </div>
+        <!-- // Centre Div // -->
+    </div>
+    <script src="Project.js"></script>
+</body>
+</html>
